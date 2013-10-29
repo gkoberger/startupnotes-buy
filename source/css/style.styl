@@ -1,9 +1,214 @@
 @import nib
 
-greyish = #eee
-
+orange = #e57007
 *, *:before, *:after
   box-sizing border-box
 
-body
-  background-color greyish
+a.header
+  padding 5px 20px
+  background-color orange
+  color #fff
+  display block
+  font-size 12px
+  &:hover
+    text-decoration none
+    background-color darken(orange, 15%)
+  i
+    font-size 14px
+    padding-right 2px
+
+.container
+  max-width 1080px
+
+header
+  background linear-gradient(#fff, #eee)
+  padding-top 30px
+  padding-bottom 20px
+  .maintext
+    text-align right
+    padding-right 30px
+    padding-top 80px
+    @media screen and (max-width: 767px)
+      text-align center
+      padding 0
+    h1, h2, h3, h4
+      font-family 'Open Sans', sans-serif
+    h2
+      font-size 20px
+      color #bbb
+      margin 0
+      font-weight 300
+    h1
+      color #9d9a9a
+      margin 10px 0
+      font-size 40px
+      font-weight 400
+      strong
+        font-weight 700
+        color #555
+        font-weight bold
+    h3
+      margin 0
+      font-size 20px
+      color #888
+      position relative
+      display inline
+      font-weight 300
+      em
+        color orange
+        font-style normal
+        font-weight bold
+      span 
+        z-index 20
+        position relative
+      &:before
+        content " "
+        width 103px
+        height 32px
+        background-image url(../img/highlight.png)
+        display block
+        position absolute
+        z-index 10
+        top -2px
+        left -31px
+    .button
+      background-color orange
+      border 1px solid darken(orange, 20%)
+      padding 10px 45px
+      border-radius 5px
+      margin-top 30px
+      color #fff
+      font-size 20px
+      display inline-block
+      transition 0.3s ease-out
+      &:hover
+        text-decoration none
+        background-color darken(orange, 20%)
+
+  .book
+    max-width 100%
+    margin-left 20px
+    @media screen and (max-width: 767px)
+      margin auto
+      display block
+  .thanks
+    position relative
+    .fiftythree-logo
+      width 103px
+      height 99px
+      background-image url(../img/53.png)
+      background-position -103px 0
+      position absolute
+      left 0
+      top 0
+      div
+        width 103px
+        height 99px
+        background-image url(../img/53.png)
+        opacity 0
+        transition 0.5s ease-out
+    &:hover
+      .fiftythree-logo div
+        opacity 1
+    display block
+    margin-top 100px
+    color #999
+    font-size 12px
+    padding-left 90px
+    padding-top 20px
+    border-top 1px solid #ddd
+    box-shadow 0 1px #fff inset
+    transition 0.2s linear
+    p
+      position relative
+      z-index 10
+    &:hover
+      color #555
+      text-decoration none
+
+.middle
+  margin-top 50px
+  color: #777;
+  line-height: 2em;
+  font-size: 13px;
+  p
+    padding-right 50px
+
+a
+  color orange
+  &:hover
+    color darken(orange, 15%)
+    text-decoration none
+
+.sidebar
+  @media screen and (max-width: 767px)
+    margin-top 40px
+    border-top 1px solid #ccc
+    padding-top 40px
+  h4
+    color orange
+  .product
+    background-image url(../img/book-small.png)
+    background-repeat no-repeat
+    padding-left 95px
+    padding-top 10px
+    min-height 100px
+    li
+      margin-bottom 10px
+  ul, p
+    list-style: none;
+    margin 0 0 40px 0
+    padding: 0;
+    line-height: 1.5em;
+
+.divider
+  height 83px
+  width 415px
+  background-image url(../img/divider.png);
+  margin 50px auto 0
+  position relative
+  @media screen and (max-width: 767px)
+    width 207px
+    height 41px
+    background-size cover
+    background-repeat no-repeat
+    top -19px
+
+.faq
+  background-color #eee
+  padding-top 70px
+  margin-top -43px
+  padding-bottom 70px
+  h4
+    margin 0
+    font-size 40px
+    text-align center
+    color orange
+    text-shadow 1px 1px #fff
+  .more
+    max-width 400px
+    padding 0 20px
+    text-align center
+    margin auto
+    margin-bottom 40px
+    color #666
+    margin-top 10px
+  .q
+    color #666
+    font-weight bold
+  .a
+    color: #999;
+    font-size: 13px;
+  .row  
+    padding-top 20px
+    border-top 1px solid #ccc
+    box-shadow 0 1px #fff inset
+    padding-bottom 30px
+
+.photo
+  background-image url(../img/photo.png)
+  background-size cover
+  background-position center center
+  height 590px
+  @media screen and (max-width: 767px)
+    height 340px
